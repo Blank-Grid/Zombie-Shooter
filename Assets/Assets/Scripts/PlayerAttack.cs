@@ -47,6 +47,7 @@ public class PlayerAttack : MonoBehaviour {
 		ray.origin = Camera.main.transform.position;	//设置射线发射的原点：摄像机所在的位置
         ray.direction = Camera.main.transform.forward;	//设置射线发射的方向：摄像机的正方向
         gunLine.SetPosition(0, transform.position);		//设置线渲染器（开枪后的激光射线）第一个端点的位置：玩家枪械的枪口位置（本游戏对象）
+
         //发射射线，射线有效长度为shootingRange，若射线击中任何游戏对象，则返回true，否则返回false
 		if (Physics.Raycast(ray, out hitInfo, shootingRange))
         {
@@ -64,8 +65,11 @@ public class PlayerAttack : MonoBehaviour {
             }
 			gunLine.SetPosition(1, hitInfo.point);	//当射线击中游戏对象时，将线渲染器（开枪后的激光射线）第二个端点设为射线击中游戏对象的点
         }
+
 		//若射线未射中游戏对象，则将线渲染器（开枪后的激光射线）第二个端点设为射线射出后的极限位置
         else gunLine.SetPosition(1, ray.origin + ray.direction * shootingRange);
-		gunLine.enabled = true;	//将线渲染器（开枪后的激光射线）启用，显示玩家开枪后的效果。
+
+        //将线渲染器（开枪后的激光射线）启用，显示玩家开枪后的效果。
+        gunLine.enabled = true;	
     }
 }
