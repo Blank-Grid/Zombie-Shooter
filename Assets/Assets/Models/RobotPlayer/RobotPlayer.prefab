@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 54506661717535376}
   - component: {fileID: 114288136846853022}
   - component: {fileID: 136346225736311922}
+  - component: {fileID: 114093102283952712}
   m_Layer: 0
   m_Name: RobotPlayer
   m_TagString: Player
@@ -349,6 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 449874}
   - component: {fileID: 12002928}
+  - component: {fileID: 114120155325214628}
   m_Layer: 0
   m_Name: GunBarrelEnd
   m_TagString: Untagged
@@ -1982,6 +1984,34 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114093102283952712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff5c28261e113b4c9de588614402837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  isAlive: 1
+--- !u!114 &114120155325214628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35addf14e0f4bb14f8bdaae278c8dd51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingDamage: 1
+  shootingRange: 50
+  shootingAudio: {fileID: 8300000, guid: f1cd17a64bb2be74184b09b371682064, type: 3}
+  timeBetweenShooting: 1
 --- !u!114 &114288136846853022
 MonoBehaviour:
   m_ObjectHideFlags: 1
